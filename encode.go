@@ -12,6 +12,10 @@ type Encoder struct {
 	w io.Writer
 }
 
+func NewEncoder(w io.Writer) Encoder {
+	return Encoder{w}
+}
+
 func (e Encoder) Encode(p PlayerData) {
 	e.writeString(p.Name)
 	e.writeShortLE(p.X)

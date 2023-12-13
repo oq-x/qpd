@@ -6,6 +6,10 @@ type Decoder struct {
 	r io.Reader
 }
 
+func NewDecoder(r io.Reader) Decoder {
+	return Decoder{r}
+}
+
 func (d Decoder) Decode(p *PlayerData) {
 	d.readString(&p.Name)
 	d.readShortLE(&p.X)
