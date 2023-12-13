@@ -3,7 +3,7 @@ This is just some format for saving Minecraft Classic player data, nothing crazy
 
 ## Format
 * int16 = little endian int16 (2 bytes)
-* string = string prefixed by an int16
+* string = string prefixed by its length as an int16
 
 ```
 string | name - the player's name
